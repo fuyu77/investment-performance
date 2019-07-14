@@ -3,7 +3,8 @@ module.exports = {
     "browser": true,
     "es6": true
   },
-  "extends": "eslint:recommended",
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -12,6 +13,7 @@ module.exports = {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "extends": "plugin:@typescript-eslint/recommended",
   "rules": {
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "onEdit", "argsIgnorePattern": "^_" }],

@@ -34,13 +34,13 @@ export default class InvestmentPerformance {
     }
   }
 
-  public setCash(): void {
+  public copyPreviousCash(): void {
     if (this.values[this.lastRow - 2][this.CASH] === "") {
       this.values[this.lastRow - 2][this.CASH] = this.values[this.lastRow - 3][this.CASH]
     }
   }
 
-  public setPrincipal(): void {
+  public copyPreviousPrincipal(): void {
     if (this.values[this.lastRow - 2][this.PRINCIPAL] === "") {
       this.values[this.lastRow - 2][this.PRINCIPAL] = this.values[this.lastRow - 3][this.PRINCIPAL]
     }
